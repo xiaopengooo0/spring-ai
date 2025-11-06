@@ -1,0 +1,2 @@
+我们的主打产品是 Spring AI 助手，支持 RAG、Agent 和对话记忆。
+支持 OpenAI、Ollama、Azure 等多种模型后端。
