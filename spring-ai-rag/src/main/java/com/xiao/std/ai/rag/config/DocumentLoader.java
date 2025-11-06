@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 public class DocumentLoader {
 
     private static final Logger log = LoggerFactory.getLogger(DocumentLoader.class);
