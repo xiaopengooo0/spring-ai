@@ -191,3 +191,21 @@ mvn test -pl spring-ai-rag
 
 - 感谢 [Spring AI](https://github.com/spring-projects/spring-ai) 项目提供的强大AI能力支持
 - 感谢 [智谱AI](https://www.zhipuai.cn/) 提供的大模型和嵌入服务
+
+## 🧩 MCP 模块说明
+
+项目还包含一个 [spring-ai-mcp](file://D:\workplace\JAVA\free_dev\learning\spring-ai\spring-ai-mcp) 模块，用于演示 Spring AI 的 Model Context Protocol (MCP) 功能。
+
+### MCP 简介
+
+MCP (Model Context Protocol) 是一种标准化协议，允许大型语言模型 (LLM) 以结构化方式与外部工具和资源进行交互。它类似于 USB-C 接口，提供了一种统一的集成方式。
+
+### Client 和 Server 可以共存
+
+在 Spring AI 中，MCP Client 和 Server 可以在同一个应用中同时存在：
+
+- **MCP Client**：用于连接到其他 MCP Server，调用它们提供的工具和服务
+- **MCP Server**：用于向其他 MCP Client 提供工具和服务
+
+这种设计允许构建复杂的工具链，其中应用既可以消费其他服务，也可以提供自己的服务。
+

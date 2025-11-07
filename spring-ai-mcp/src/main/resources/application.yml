@@ -1,0 +1,26 @@
+server:
+  port: 8091
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/aidb
+    username: aidb
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  ai:
+    zhipuai:
+      api-key: Apikey
+      #      base-url: https://open.bigmodel.cn/api/paas/v4
+      chat:
+        options:
+          model: glm-4.5-flash
+    mcp:
+      client:
+        enabled: true
+        stdio:
+          servers-configuration: classpath:/config/mcp-servers.json
+        name:  mcp-client
+#      远程server
+#      server:
+#        base-url:
+
