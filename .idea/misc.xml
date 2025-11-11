@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/mcp-server/pom.xml" />
+        <option value="$PROJECT_DIR$/wx-public-notice/pom.xml" />
       </list>
     </option>
   </component>

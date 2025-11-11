@@ -1,0 +1,7 @@
+wx:
+  config:
+    originalId: gh_70355ebd950e
+    token: b8b6
+
+server:
+  port: 80
