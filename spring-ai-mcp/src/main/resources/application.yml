@@ -9,7 +9,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   ai:
     zhipuai:
-      api-key: Apikey
+      api-key: 0120679930954c13a2665e81b908b6aa.JH8jI1b0rcTcD5jx
       #      base-url: https://open.bigmodel.cn/api/paas/v4
       chat:
         options:
@@ -20,6 +20,7 @@ spring:
         stdio:
           servers-configuration: classpath:/config/mcp-servers.json
         name:  mcp-client
+        request-timeout: 180000
 #      远程server
 #      server:
 #        base-url:

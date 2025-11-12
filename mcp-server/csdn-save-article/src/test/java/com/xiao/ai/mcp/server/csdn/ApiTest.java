@@ -6,6 +6,7 @@ import com.xiao.ai.mcp.server.csdn.model.SaveArticleResponse;
 import com.xiao.ai.mcp.server.csdn.service.ICSDNService;
 import com.xiao.ai.mcp.server.csdn.util.MarkdownConverter;
 import jakarta.annotation.Resource;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -25,6 +25,15 @@
         "-jar",
         "D:\\workplace\\JAVA\\free_dev\\learning\\spring-ai\\mcp-server\\csdn-save-article\\target\\csdn-save-article-1.0-SNAPSHOT.jar"
       ]
+    },
+    "mcp-wx-notice": {
+      "command": "java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dfile.encoding=utf-8",
+        "-jar",
+        "D:\\workplace\\JAVA\\free_dev\\learning\\spring-ai\\mcp-server\\wx-public-notice\\target\\wx-public-notice-1.0-SNAPSHOT.jar"
+      ]
     }
   }
 }

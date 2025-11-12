@@ -1,0 +1,40 @@
+wx:
+  config:
+    originalId: gh_70355ebd950e
+    token: b8b6
+    appId: wx391e7ee65974f7cb
+    appSecret: faf26b31847d365905080b12cace464e
+    template_id: JHjMh32Wfblx2UOhAdcPniGRWhUbxlGDXz3AMLgbxqc
+    touser: oxTlQ7D-hy4wZ0fOs0_Y_Kt7y0O8
+
+server:
+  port: 9011
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+spring:
+  application:
+    name: mcp-wx-notice
+
+  ai:
+    mcp:
+      server:
+        name: ${spring.application.name}
+        version: 1.0.0
+
+  main:
+    banner-mode: off
+    # stdio 模式打开，sse 模式，注释掉。
+    web-application-type: none
+
+logging:
+  # stdio 模式打开，sse 模式，注释掉。
+  pattern:
+    console:
+  charset:
+    file: utf-8
+  file:
+    name: data/log/${spring.application.name}.log

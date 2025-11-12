@@ -24,7 +24,7 @@ public class McpService {
 
     public String generateArticle(String question) {
         String userInput = """
-                我需要你帮我生成一篇文章，要求如下；
+                我需要你帮我生成一篇文章600字以内，要求如下；
                 
                 1. 场景为互联网大厂java求职或学习中常遇到的问题
                 2. 技术栈如下；
