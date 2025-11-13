@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.std</groupId>
+        <artifactId>spring-ai</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ai-agent-station</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+            <!--    接口层 -->
+        <module>ai-agent-station-api</module>
+            <!--    应用层 -->
+        <module>ai-agent-station-app</module>
+            <!--    领域层-->
+        <module>ai-agent-station-domain</module>
+        <!--        数据层-->
+        <module>ai-agent-station-infrastructure</module>
+        <!--        触发器-->
+        <module>ai-agent-station-trigger</module>
+        <!--        类型定义-->
+        <module>ai-agent-station-types</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
