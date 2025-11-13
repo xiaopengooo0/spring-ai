@@ -29,6 +29,8 @@ public class ApiTest {
 
 
 
+
+
     @Test
     public void test_weixinNotice() {
         String userInput = """
@@ -61,6 +63,15 @@ public class ApiTest {
         System.out.println(res1);
         String res2 = mcpService.ask("根据配置信息，查询一下java版本");
         System.out.println(res2);
-
     }
+
+
+    @Test
+    public void list_tools(){
+        String tools = mcpService.ask("列出所有工具");
+        System.out.println(tools);
+    }
+
+
+
 }
