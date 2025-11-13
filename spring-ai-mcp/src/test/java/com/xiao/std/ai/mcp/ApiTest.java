@@ -1,5 +1,6 @@
 package com.xiao.std.ai.mcp;
 
+import com.xiao.std.ai.mcp.service.McpService;
 import jakarta.annotation.Resource;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,15 +19,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ApiTest {
 
     @Resource
-    private ChatClient.Builder builder;
-
-    private  ChatClient chatClient ;
+    private  ChatClient zhipuAiChatClient ;
 
 
-    @Before
-    public void init() {
-        chatClient = builder.build();
-    }
+    @Resource
+    private McpService mcpService;
+
+
+
 
 
     @Test
@@ -48,9 +48,19 @@ public class ApiTest {
 
         System.out.println("\n>>> QUESTION: " + userInput);
 
-        System.out.println("\n>>> ASSISTANT: " + chatClient
+        System.out.println("\n>>> ASSISTANT: " + zhipuAiChatClient
                 .prompt(userInput)
                 .call()
                 .content());
+    }
+
+
+    @Test
+    public void test_memory_chat(){
+        String res1 = mcpService.ask("查看一下当前电脑配置");
+        System.out.println(res1);
+        String res2 = mcpService.ask("根据配置信息，查询一下java版本");
+        System.out.println(res2);
+
     }
 }

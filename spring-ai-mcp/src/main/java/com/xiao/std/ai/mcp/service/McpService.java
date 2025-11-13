@@ -1,5 +1,6 @@
 package com.xiao.std.ai.mcp.service;
 
+import jakarta.annotation.Resource;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
 
@@ -11,15 +12,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class McpService {
 
-    private final ChatClient chatClient;
-
-    public McpService(ChatClient.Builder builder) {
-        this.chatClient = builder.build();
-
-    }
+    @Resource
+    private ChatClient zhipuAiChatClient;
 
     public String ask(String question) {
-        return chatClient.prompt(question).call().content();
+        return zhipuAiChatClient.prompt(question).call().content();
     }
 
     public String generateArticle(String question) {
@@ -58,7 +55,7 @@ public class McpService {
                 将以上内容保存文章到CSDN
                 """;
         
-        return chatClient.prompt(userInput).call().content();
+        return zhipuAiChatClient.prompt(userInput).call().content();
     }
 
 }

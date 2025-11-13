@@ -7,11 +7,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.DefaultChatClientBuilder;
+import org.springframework.ai.chat.client.advisor.PromptChatMemoryAdvisor;
+import org.springframework.ai.chat.memory.ChatMemory;
+import org.springframework.ai.chat.memory.MessageWindowChatMemory;
 import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
 import org.springframework.ai.zhipuai.ZhiPuAiChatModel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+
 
 import java.util.List;
 
@@ -27,7 +30,7 @@ public class McpConfig {
 
     @Bean
 //    @Primary
-    public ChatClient.Builder chatClient(ZhiPuAiChatModel zhiPuAiChatModel,
+    public ChatClient zhipuAiChatClient(ZhiPuAiChatModel zhiPuAiChatModel,
                                 List<McpSyncClient> mcpSyncClients,
                                 McpClientTools mcpClientTools) {
         DefaultChatClientBuilder clientBuilder = new DefaultChatClientBuilder(zhiPuAiChatModel, ObservationRegistry.NOOP, null);
@@ -38,11 +41,13 @@ public class McpConfig {
 
       return   clientBuilder
                 // 用于注册回调提供者，可以动态生成回调函数
-            .defaultToolCallbacks(new SyncMcpToolCallbackProvider(mcpSyncClients));
+            .defaultToolCallbacks(new SyncMcpToolCallbackProvider(mcpSyncClients))
                 // 用于注册本地工具方法
-//            .defaultTools(mcpClientTools);
+            .defaultTools(mcpClientTools)
+              .build();
 
     }
+
 
 
 }

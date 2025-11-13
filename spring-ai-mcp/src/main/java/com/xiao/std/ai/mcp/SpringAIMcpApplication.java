@@ -1,7 +1,10 @@
 package com.xiao.std.ai.mcp;
 
+import org.springframework.ai.chat.memory.ChatMemory;
+import org.springframework.ai.chat.memory.InMemoryChatMemoryRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * @Author: xiaopeng
@@ -13,4 +16,8 @@ public class SpringAIMcpApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringAIMcpApplication.class, args);
     }
+
+
+
+
 }
