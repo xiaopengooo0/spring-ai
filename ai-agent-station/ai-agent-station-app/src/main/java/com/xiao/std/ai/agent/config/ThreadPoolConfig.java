@@ -1,6 +1,5 @@
-package com.xiao.std.ai.agent.app.config;
+package com.xiao.std.ai.agent.config;
 
-import jdk.jfr.Enabled;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

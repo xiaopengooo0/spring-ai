@@ -1,0 +1,8 @@
+server:
+  port: 9012
+
+
+
+spring:
+  application:
+    name: mcp-service-sse

@@ -19,6 +19,13 @@ spring:
         enabled: true
         stdio:
           servers-configuration: classpath:/config/mcp-servers.json
+        sse:
+          connections:
+            sse1:
+              url: http://localhost:9012
+
+
+
         name:  mcp-client
         request-timeout: 180000
 #      远程server

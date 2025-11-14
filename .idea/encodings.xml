@@ -12,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/data/log/mcp-csdn-save_article.log" charset="GBK" />
     <file url="file://$PROJECT_DIR$/mcp-server-local/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp-server/csdn-save-article/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcp-server/mcp-server-sse/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp-server/wx-public-notice/src/main/java" charset="UTF-8" />

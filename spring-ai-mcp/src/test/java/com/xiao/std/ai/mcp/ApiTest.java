@@ -72,6 +72,12 @@ public class ApiTest {
         System.out.println(tools);
     }
 
+    @Test
+    public void test_tool_call(){
+        String res = mcpService.ask("获取一下当前时间，附带上实用工具名称");
+        System.out.println(res);
+    }
+
 
 
 }

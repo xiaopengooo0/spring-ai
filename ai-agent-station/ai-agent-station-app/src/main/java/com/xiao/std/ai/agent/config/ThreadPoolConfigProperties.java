@@ -1,4 +1,4 @@
-package com.xiao.std.ai.agent.app.config;
+package com.xiao.std.ai.agent.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

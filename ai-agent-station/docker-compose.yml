@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:8.0
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=ai-agent-station
+      - MYSQL_USER=ai-agent-station
+      - MYSQL_PASSWORD=aiagent
+      - TZ=Asia/Shanghai
+      - MYSQL_TCP_PORT=3306
+      - MYSQL_PORT=3306
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql_data/data
+volumes:
+  mysql_data:

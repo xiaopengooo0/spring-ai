@@ -18,6 +18,7 @@
     <modules>
         <module>csdn-save-article</module>
         <module>wx-public-notice</module>
+        <module>mcp-server-sse</module>
     </modules>
 
     <properties>
